@@ -1,0 +1,35 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Conveyor, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Conveyor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    softPLC* plc : Public, Static
+  Methods:
+    generateBCC(Byte[]): PrivateScope, Public, Static, HideBySig
+    initialise(): PrivateScope, Public, Static, HideBySig
+    leftToMiddle(): PrivateScope, Public, Static, HideBySig
+    middleToRight(): PrivateScope, Public, Static, HideBySig
+    rightToMiddle(): PrivateScope, Public, Static, HideBySig
+    middleToLeft(): PrivateScope, Public, Static, HideBySig
+    move(): PrivateScope, Public, Static, HideBySig
+    calculateMoveDuration(Int32): PrivateScope, Public, Static, HideBySig
+    setDirection(Int32): PrivateScope, Public, Static, HideBySig
+    setSpeed(Int32): PrivateScope, Public, Static, HideBySig
+    getStatus(): PrivateScope, Public, Static, HideBySig
+    getSpeed(): PrivateScope, Public, Static, HideBySig
+    stop(): PrivateScope, Public, Static, HideBySig
+    resume(): PrivateScope, Public, Static, HideBySig
+    sendCommand(Byte[], Int32): PrivateScope, Public, Static, HideBySig
+    sendControlCommands(): PrivateScope, Public, Static, HideBySig
+    start(String): PrivateScope, Public, Static, HideBySig
+    shutdown(): PrivateScope, Public, Static, HideBySig
+    initialisePLC(): PrivateScope, Public, Static, HideBySig
