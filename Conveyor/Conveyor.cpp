@@ -148,7 +148,7 @@ public:
 
 		thread->Start();
 
-		System::Threading::Thread::Sleep(calculateMoveDuration(2150));
+		System::Threading::Thread::Sleep(calculateMoveDuration(2450));
 		thread->Abort();
 		Conveyor::plc->write16_register(sc_status, sc_status_online);
 		Conveyor::plc->write16_register(sc_response, sc_response_completed);
@@ -156,19 +156,19 @@ public:
 
 	static void rightToMiddle()
 	{
-		//Conveyor::plc->write16_register(sc_status, sc_status_active);
-  //      // align the box
-  //      Conveyor::setDirection(1);
+		Conveyor::plc->write16_register(sc_status, sc_status_active);
+        // align the box
+        Conveyor::setDirection(1);
 
 		unsigned char bcc = generateBCC(gcnew array<unsigned char> {0x02, 0x00, 0x85, 0x00, 0x06, speed[0], speed[1], 0x00, 0x00});
-		/*current_command = gcnew array<unsigned char> {0x02, 0x00, 0x85, 0x00, 0x06, speed[0], speed[1], 0x00, 0x00, bcc};
+		current_command = gcnew array<unsigned char> {0x02, 0x00, 0x85, 0x00, 0x06, speed[0], speed[1], 0x00, 0x00, bcc};
 
 		thread = gcnew System::Threading::Thread( gcnew ThreadStart(&Conveyor::sendControlCommands));
 
 		thread->Start();
 
 		System::Threading::Thread::Sleep(calculateMoveDuration(1500));
-		thread->Abort();*/
+		thread->Abort();
 
         //
 
