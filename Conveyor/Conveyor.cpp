@@ -148,7 +148,7 @@ public:
 
 		thread->Start();
 
-		System::Threading::Thread::Sleep(calculateMoveDuration(2450));
+		System::Threading::Thread::Sleep(calculateMoveDuration(2440));
 		thread->Abort();
 		Conveyor::plc->write16_register(sc_status, sc_status_online);
 		Conveyor::plc->write16_register(sc_response, sc_response_completed);
